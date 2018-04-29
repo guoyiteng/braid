@@ -705,12 +705,11 @@ function check_quantified(tvar: TypeVariable, target: Type,
         }
       }
     }
-    if (args.length === 0 && annot_type) {
-      vType = annot_type;
-    }
 
-    if (vType) {
+    if (vType && annot_type === vType) {
       return vType;
+    } else if (args.length === 0 && annot_type) {
+      return annot_type;
     } else {
       return "cannot unify the generic type";
     }
