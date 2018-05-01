@@ -710,6 +710,8 @@ function check_quantified(tvar: TypeVariable, target: Type,
       return vType;
     } else if (args.length === 0 && annot_type) {
       return annot_type;
+    } else if (annot_type && vType && !compatible(annot_type, vType)) {
+      return `expected ${pretty_type(annot_type)}, got ${pretty_type(vType)}`;
     } else {
       return "cannot unify the generic type";
     }
