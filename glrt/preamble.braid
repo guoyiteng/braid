@@ -16,7 +16,7 @@ extern mesh_tangents: Mesh -> (Float3 Buffer) = "rt.mesh_tangents";
 extern draw_mesh: (Int3 Buffer) Int -> Void = "rt.draw_mesh";
 extern draw_arrays: Int -> Void = "rt.draw_arrays";
 extern array_buffer:
-    (Int Buffer) -> (Int Array) |
+    (Int Array) -> (Int Buffer) |
     (Float Array) -> (Float Buffer) |
     (Float2 Array) -> (Float2 Buffer) |
     (Float3 Array) -> (Float3 Buffer) |
