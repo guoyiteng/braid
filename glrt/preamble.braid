@@ -26,19 +26,19 @@ extern element_buffer: (Int Array) -> (Int3 Buffer) = "rt.element_buffer";
 
 # Matrix manipulation library.
 extern mat4.create: -> Mat4 = "rt.mat4.create";
-extern mat4.rotate: Mat4 Mat4 Float Vec3 -> Void = "rt.mat4.rotate";
-extern mat4.rotateX: Mat4 Mat4 Float -> Void = "rt.mat4.rotateX";
-extern mat4.rotateY: Mat4 Mat4 Float -> Void = "rt.mat4.rotateY";
-extern mat4.rotateZ: Mat4 Mat4 Float -> Void = "rt.mat4.rotateZ";
-extern mat4.scale: Mat4 Mat4 Vec3 -> Void = "rt.mat4.scale";
-extern mat4.translate: Mat4 Mat4 Vec3 -> Void = "rt.mat4.translate";
-extern mat4.fromTranslation: Mat4 Vec3 -> Void = "rt.mat4.fromTranslation";
-extern mat4.transpose: Mat4 Mat4 -> Void = "rt.mat4.transpose";
-extern mat4.scale: Mat4 Mat4 Vec3 -> Void = "rt.mat4.scale";
-extern mat4.invert: Mat4 Mat4 -> Void = "rt.mat4.invert";
-extern mat4.perspective: Mat4 Float Float Float Float -> Void
+extern mat4.rotate: Mat4 Mat4 Float Vec3 -> Mat4 = "rt.mat4.rotate";
+extern mat4.rotateX: Mat4 Mat4 Float -> Mat4 = "rt.mat4.rotateX";
+extern mat4.rotateY: Mat4 Mat4 Float -> Mat4 = "rt.mat4.rotateY";
+extern mat4.rotateZ: Mat4 Mat4 Float -> Mat4 = "rt.mat4.rotateZ";
+extern mat4.scale: Mat4 Mat4 Vec3 -> Mat4 = "rt.mat4.scale";
+extern mat4.translate: Mat4 Mat4 Vec3 -> Mat4 = "rt.mat4.translate";
+extern mat4.fromTranslation: Mat4 Vec3 -> Mat4 = "rt.mat4.fromTranslation";
+extern mat4.transpose: Mat4 Mat4 -> Mat4 = "rt.mat4.transpose";
+extern mat4.scale: Mat4 Mat4 Vec3 -> Mat4 = "rt.mat4.scale";
+extern mat4.invert: Mat4 Mat4 -> Mat4 = "rt.mat4.invert";
+extern mat4.perspective: Mat4 Float Float Float Float -> Mat4
     = "rt.mat4.perspective";
-extern mat4.lookAt: Mat4 Vec3 Vec3 Vec3 -> Void = "rt.mat4.lookAt";
+extern mat4.lookAt: Mat4 Vec3 Vec3 Vec3 -> Mat4 = "rt.mat4.lookAt";
 
 # Get the camera position (in world space) from a view matrix.
 extern eye: Mat4 -> Vec3 = "rt.eye";
