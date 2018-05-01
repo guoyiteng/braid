@@ -706,7 +706,7 @@ function check_quantified(tvar: TypeVariable, target: Type,
       }
     }
 
-    if (vType && (!annot_type || annot_type === vType)) {
+    if (vType && (!annot_type || compatible(annot_type, vType))) {
       return vType;
     } else if (args.length === 0 && annot_type) {
       return annot_type;
